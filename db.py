@@ -74,3 +74,7 @@ def fetch_tweets():
 
 if __name__ == "__main__":
     create_table()  
+
+
+
+#remmache mohamed 21/02/2025 

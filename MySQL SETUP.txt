@@ -1,0 +1,37 @@
+CREATE DATABASE sentiment_db;
+
+
+ use sentiment_db ;
+
+CREATE TABLE IF NOT EXISTS tweets (
+                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    text TEXT NOT NULL,
+                    positive TINYINT(1),
+                    negative TINYINT(1)
+                )
+;
+
+
+
+INSERT INTO tweets (text, positive, negative) VALUES
+('Ce produit est absolument fantastique, je l adore !', 1, 0),
+('Un must-have, je le recommande vivement !', 1, 0),
+('Expérience incroyable, tout fonctionne parfaitement.', 1, 0),
+('Ravi de mon achat, au-delà de mes attentes.', 1, 0),
+('Livraison rapide et produit de qualité, top !', 1, 0),
+('Super service client, très réactif et efficace.', 1, 0),
+('Je suis conquis, je le rachèterai sans hésiter.', 1, 0),
+('Produit de haute qualité, totalement satisfait.', 1, 0),
+('Excellente performance, je ne peux plus m en passer !', 1, 0),
+('L innovation est au rendez-vous, je suis bluffé.', 1, 0),
+('Très déçu, ne correspond pas du tout à mes attentes.', 0, 1),
+('Mauvaise qualité, je regrette mon achat.', 0, 1),
+('Service client inexistant, une vraie catastrophe.', 0, 1),
+('Produit arrivé cassé, une horreur !', 0, 1),
+('Expérience utilisateur médiocre, je déconseille.', 0, 1),
+('Bien trop cher pour ce que c est, une arnaque.', 0, 1),
+('Performance en dessous de tout, très frustrant.', 0, 1),
+('Impossible à utiliser correctement, un échec total.', 0, 1),
+('Ne fonctionne pas comme prévu, je suis très insatisfait.', 0, 1),
+('Je suis extrêmement déçu, ne vaut pas l argent dépensé.', 0, 1);
+
